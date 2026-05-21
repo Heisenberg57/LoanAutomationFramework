@@ -22,4 +22,13 @@ public class LoginTest extends BaseTest {
 
         Assert.assertTrue(dashboardPage.isDashboardDisplayed());
     }
+
+
+    @Test
+    public void invalidLoginTest(){
+        LoginPage loginPage = new LoginPage(driver);
+        loginPage.login("Maxpayne22","mypass123");
+
+        Assert.assertEquals(loginPage.getErrorMessage(),"Invalid credentials");
+    }
 }

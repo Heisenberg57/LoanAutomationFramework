@@ -13,11 +13,17 @@ public class LoginPage {
     By username = By.name("username");
     By password = By.name("password");
     By loginBtn = By.xpath("//button[@type='submit']");
+    By errorMessage = By.xpath("//p[contains(@class,'alert')]");
+
 
     public void login(String user, String pass){
 
         driver.findElement(username).sendKeys(user);
         driver.findElement(password).sendKeys(pass);
         driver.findElement(loginBtn).click();
+    }
+
+    public String getErrorMessage(){
+        return driver.findElement(errorMessage).getText();
     }
 }
