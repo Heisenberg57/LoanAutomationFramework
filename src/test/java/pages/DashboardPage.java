@@ -10,7 +10,7 @@ public class DashboardPage {
         this.driver = driver;
     }
 
-    By dashBoardHeader = By.xpath("//h6[text()='DashBoard']");
+    By dashBoardHeader = By.xpath("//h6[text()='Dashboard']");
 
     public boolean isDashboardDisplayed(){
 
