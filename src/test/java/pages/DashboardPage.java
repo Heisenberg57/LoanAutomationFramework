@@ -1,13 +1,14 @@
 package pages;
 
+import base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class DashboardPage {
-    WebDriver driver;
+public class DashboardPage extends BasePage {
+//    WebDriver driver;
 
     public DashboardPage(WebDriver driver){
-        this.driver = driver;
+        super((driver));
     }
 
     By dashBoardHeader = By.xpath("//h6[text()='Dashboard']");
