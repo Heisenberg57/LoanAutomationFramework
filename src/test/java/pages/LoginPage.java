@@ -20,12 +20,15 @@ public class LoginPage extends BasePage {
 
     public void login(String user, String pass){
         WaitUtils.waitForVisibility(driver,username);
-        driver.findElement(username).sendKeys(user);
-        driver.findElement(password).sendKeys(pass);
-        driver.findElement(loginBtn).click();
+//        driver.findElement(username).sendKeys(user);
+//        driver.findElement(password).sendKeys(pass);
+//        driver.findElement(loginBtn).click();
+        type(username,user);
+        type(password,pass);
+        click(loginBtn);
     }
 
     public String getErrorMessage(){
-        return driver.findElement(errorMessage).getText();
+        return getText(errorMessage);
     }
 }
