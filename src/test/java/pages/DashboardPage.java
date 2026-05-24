@@ -14,6 +14,7 @@ public class DashboardPage extends BasePage {
     By dashBoardHeader = By.xpath("//h6[text()='Dashboard']");
     By profileMenu = By.xpath("//p[@class='oxd-userdropdown-name']");
     By logotBtn = By.xpath("//a[text()='Logout']");
+    By pimMenu = By.xpath("//span[text()='PIM']");
 
     public boolean isDashboardDisplayed(){
 
@@ -23,5 +24,9 @@ public class DashboardPage extends BasePage {
     public void logout(){
         driver.findElement(profileMenu).click();
         driver.findElement(logotBtn).click();
+    }
+
+    public void openPIMModule(){
+        click(pimMenu);
     }
 }
